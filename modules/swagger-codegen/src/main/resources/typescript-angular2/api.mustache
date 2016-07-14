@@ -65,8 +65,8 @@ export class {{classname}} {
 
 {{/hasFormParams}}
 {{#formParams}}
-        formParams['{{baseName}}'] = {{paramName}};
-
+        <!--formParams['{{baseName}}'] = {{paramName}};-->
+        formParams.append('{{baseName}}',{{paramName}});
 {{/formParams}}
         let requestOptions: RequestOptionsArgs = {
             method: '{{httpMethod}}',
